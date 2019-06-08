@@ -3,10 +3,11 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
-from server import app, server
+from server import app, server # load Dash app and Flask app
 from flask_login import logout_user, current_user
 from views import success, login, login_fd, logout
 
+# header
 header = html.Div(
     className='header',
     children=html.Div(

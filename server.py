@@ -3,7 +3,7 @@ import dash
 # User management initialization
 import os
 from flask_login import LoginManager, UserMixin
-from users_mgt import db, User as base
+from users_mgt import db, User
 from config import config
 
 
@@ -41,7 +41,7 @@ login_manager.login_view = '/login'
 
 
 # Create User class with UserMixin
-class User(UserMixin, base):
+class User(UserMixin, User):
     pass
 
 

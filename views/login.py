@@ -3,6 +3,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 
 from server import app, User
+from users_mgt import Action, db
 from flask_login import login_user
 from werkzeug.security import check_password_hash
 
@@ -50,6 +51,9 @@ def sucess(n_clicks, input1, input2):
     if user:
         if check_password_hash(user.password, input2):
             login_user(user)
+            a = Action(description="Login in.", owner_id=user.id)
+            db.session.add(a)
+            db.session.commit()
             return '/success'
         else:
             pass

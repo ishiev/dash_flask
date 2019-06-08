@@ -18,7 +18,7 @@ flask-sqlalchemy==2.3.2
 flask==1.0.2              # via dash, flask-compress, flask-login, flask-sqlalchemy
 idna==2.7                 # via requests
 ipython-genutils==0.2.0   # via nbformat, traitlets
-itsdangerous==1.0.0       # via flask
+# itsdangerous==1.0.0       # via flask
 jinja2==2.10              # via flask
 jsonschema==2.6.0         # via nbformat
 jupyter-core==4.4.0       # via nbformat
